@@ -8,7 +8,7 @@ from operator import add
 import networkx as nx
 from networkx.algorithms.dag import ancestors, descendants, topological_sort
 
-from util import dijkstra, Graph
+from util import dijkstra, Graph, m_add
 
 
 def main():

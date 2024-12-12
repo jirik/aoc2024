@@ -56,3 +56,7 @@ def dijkstra(graph, initial, ends):
     # Reverse path
     path = path[::-1]
     return path
+
+
+def m_add(row, col, delta_coord):
+    return row + delta_coord[0], col + delta_coord[1]
