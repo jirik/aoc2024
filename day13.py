@@ -1,5 +1,7 @@
 import re, sys
 
+import sympy
+
 
 def get_min_tokens(machine, *, add_to_prize=0):
     axes = [0, 1]
@@ -49,8 +51,23 @@ def main():
 
         r1 = sum(get_min_tokens(m) or 0 for m in machines)
         r2 = sum(get_min_tokens(m, add_to_prize=10000000000000) or 0 for m in machines)
-
         print(file_path, r1, r2)
+
+        # just to practice sympy
+        r2 = 0
+        an, bn = sympy.symbols("an, bn", integer=True)
+        for a, b, p in machines:
+            equations = [
+                sympy.Eq(an*a[0] + bn*b[0], p[0] + 10000000000000),
+                sympy.Eq(an*a[1] + bn*b[1], p[1] + 10000000000000),
+            ]
+            solutions = [(d[an], d[bn]) for d in sympy.solve(equations, (an, bn), dict=True)]
+            if solutions:
+                a_num, b_num = min(solutions, key=lambda x: x[0])
+                r2 += a_num * 3 + b_num
+        print(file_path, r1, r2)
+
+
 
 
 if __name__ == "__main__":

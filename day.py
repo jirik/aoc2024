@@ -6,6 +6,7 @@ from itertools import pairwise, permutations, combinations, groupby, cycle, prod
 from operator import add
 
 import networkx as nx
+import sympy
 from networkx.algorithms.dag import ancestors, descendants, topological_sort
 
 from util import dijkstra, Graph, m_add
