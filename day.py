@@ -2,7 +2,7 @@ import copy, math, os, re, sys
 from collections import Counter, deque, defaultdict
 from enum import IntEnum, Enum
 from functools import reduce, lru_cache
-from itertools import pairwise, permutations, combinations, groupby, cycle, product
+from itertools import pairwise, permutations, combinations, groupby, cycle, product, chain
 from operator import add
 
 import networkx as nx
