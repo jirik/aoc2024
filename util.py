@@ -60,3 +60,7 @@ def dijkstra(graph, initial, ends):
 
 def m_add(row, col, delta_coord):
     return row + delta_coord[0], col + delta_coord[1]
+
+
+def m_mul(row, col, multiplier):
+    return row * multiplier, col * multiplier
