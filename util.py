@@ -64,3 +64,7 @@ def m_add(row, col, delta_coord):
 
 def m_mul(row, col, multiplier):
     return row * multiplier, col * multiplier
+
+
+def m_sub(coord1, coord2):
+    return coord1[0] - coord2[0], coord1[1] - coord2[1]

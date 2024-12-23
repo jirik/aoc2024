@@ -9,7 +9,7 @@ import networkx as nx
 import sympy
 from networkx.algorithms.dag import ancestors, descendants, topological_sort
 
-from util import dijkstra, Graph, m_add
+from util import dijkstra, Graph, m_add, m_sub, m_mul
 
 
 def main():
