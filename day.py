@@ -7,6 +7,7 @@ from operator import add
 
 import networkx as nx
 import sympy
+from networkx.algorithms.clique import enumerate_all_cliques
 from networkx.algorithms.dag import ancestors, descendants, topological_sort
 
 from util import dijkstra, Graph, m_add, m_sub, m_mul
