@@ -16,6 +16,7 @@ from util import dijkstra, Graph, m_add, m_sub, m_mul
 def main():
     for file_path in sys.argv[1:]:
         with open(file_path) as f:
+            # input_str = f.read()
             lines = tuple(ln.strip() for ln in f.readlines())
 
         r1 = None
